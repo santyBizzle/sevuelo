@@ -3,7 +3,7 @@ package ec.sevolutivo.sevuelos.sevuelos.repository;
 import ec.sevolutivo.sevuelos.sevuelos.domain.Request;
 import org.springframework.data.jpa.repository.*;
 import org.springframework.stereotype.Repository;
-
+import java.util.*;
 /**
  * Spring Data SQL repository for the Request entity.
  */

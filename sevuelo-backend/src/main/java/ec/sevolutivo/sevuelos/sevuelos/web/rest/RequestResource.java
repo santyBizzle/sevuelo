@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Optional;
 
+import javax.swing.text.html.BlockView;
+
 @RestController
 @RequestMapping("/api")
 @CrossOrigin(origins = "http://localhost:4200")
@@ -35,8 +37,18 @@ public class RequestResource {
 
     @GetMapping("/requests")
     public List<Request> getAllRequests() {
-        log.debug("REST request to get all Requests");
+       
+        log.warn("REST request to get all Requests");
         return requestRepository.findAll();
+    }
+
+    @DeleteMapping("/request/{id}")
+    public void deleteRequest(@PathVariable Long id) {
+        log.debug("REST Delete : {}", id);
+       // log.info("Entrando en la aplicacion");
+        log.warn("En delete ", id);
+        //log.fatal("Error fatal");
+       requestRepository.deleteById(id);
     }
 
     @GetMapping("/requests/{id}")
