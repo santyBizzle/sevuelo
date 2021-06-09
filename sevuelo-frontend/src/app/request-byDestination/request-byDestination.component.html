@@ -1,0 +1,47 @@
+<div class="row justify-content-center" >
+  <div class="col-8">
+    <h2>Find Destination</h2>
+    <input [(ngModel)]='destination' 
+    type="text" 
+    class="form-control" 
+    placeholder="" 
+    aria-label="" 
+    aria-describedby="basic-addon1">
+ 
+
+    <button
+      type="button"
+      (click)="getRequestByDestination()"
+      class="btn btn-info"
+    >
+      <span jhiTranslate="entity.action.back">Find</span>
+    </button>
+  </div>
+ 
+</div>
+<h2>Requests</h2>
+
+<div class="table-responsive" *ngIf="requests && requests.length > 0">
+  <table class="table table-striped" aria-describedby="page-heading">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Passenger</th>
+        <th scope="col">Destination</th>
+        <th scope="col">Status</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let request of requests">
+        <td>{{ request.id }}</td>
+        <td>{{ request.passenger }}</td>
+        <td>{{ request.destination }}</td>
+        <td>{{ request.status }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<button type="button" (click)="previousState()" class="btn btn-info">
+  <span jhiTranslate="entity.action.back">Back</span>
+</button>

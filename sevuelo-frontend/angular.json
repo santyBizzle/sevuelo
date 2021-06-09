@@ -124,6 +124,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "sevuelo-frontend"
+    }
+  },
+  "defaultProject": "sevuelo-frontend",
+  "cli": {
+    "analytics": "5f2f7fcc-b37a-4f1a-b3b3-6a408813d9ee"
+  }
 }

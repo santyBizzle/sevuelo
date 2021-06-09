@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { RequestsComponent } from './requests/requests.component';
 import { NewRequestComponent } from './new-request/new-request.component';
 import { RequestDetailComponent } from './request-detail/request-detail.component';
+import { RequestByDestinationComponent } from './request-byDestination/request-byDestination';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { RequestDetailComponent } from './request-detail/request-detail.componen
     AppComponent,
     RequestsComponent,
     NewRequestComponent,
-    RequestDetailComponent
+    RequestDetailComponent,
+    RequestByDestinationComponent
   ],
   imports: [
     BrowserModule,

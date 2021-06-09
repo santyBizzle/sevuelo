@@ -11,7 +11,6 @@ import { Router } from '@angular/router';
 export class NewRequestComponent implements OnInit {
 
   request: Request;
-
   constructor(
     private requestService: RequestService,
     private router: Router

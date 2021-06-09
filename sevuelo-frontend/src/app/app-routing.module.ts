@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { NewRequestComponent } from './new-request/new-request.component';
 import { RequestDetailComponent } from './request-detail/request-detail.component';
 import { RequestsComponent } from './requests/requests.component';
+import { RequestByDestinationComponent } from './request-byDestination/request-byDestination';
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: 'requests/:id',
     component: RequestDetailComponent
+  },
+  {
+    path: 'requestsByDestination',
+    component: RequestByDestinationComponent
   },
 ];
 
