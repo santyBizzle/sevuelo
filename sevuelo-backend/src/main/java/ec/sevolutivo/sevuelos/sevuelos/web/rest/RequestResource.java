@@ -58,6 +58,17 @@ public class RequestResource {
         return request.get();
     }
 
+    @GetMapping("/destination/{destination}")
+    public List<Request> getDestination(@PathVariable String destination) {
+        log.warn("REST destination : {}", destination);
+        List<Request> a = requestRepository.findAllByDestination(destination);
+        log.warn("Responseee >>>>>>> ",a);
+       
+        /* return request.get();
+        */
+        return a;
+    }
+
     @PutMapping("/reserve")
     public void reserve(@RequestBody Request request) {
         log.debug("REST request to reserve a flight");
